@@ -1,0 +1,86 @@
+body {
+  background: #232222 none repeat scroll 0 0;
+  color: #fefefe;
+  font-family: Verdana;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.hangman {
+  margin-top: 20px;
+}
+
+.output {
+  background: #fefefe;
+  color: #232222;
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+.answer-box {
+  font-size: 50px;
+  letter-spacing: 20px;
+  margin-top: 30px;
+}
+
+.letters ul {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 25px;
+}
+
+.letters ul li {
+  background: #fbf9f9;
+  border-radius: 3px;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin:3px;
+  padding: 8px;
+  width: 30px;
+  transition: background-color ease 0.2s;
+}
+
+.letters ul li:hover {
+  background: #F7DE31;
+}
+
+.letters ul .picked {
+  background: #423F40;
+  color: #212121;
+  cursor: default;
+}
+
+.letters ul .picked:hover {
+  background: #423F40;
+}
+
+.nextButton {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 40px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background: #fefefe;
+  color: #222;
+}
