@@ -4,6 +4,7 @@ import Answer from './components/Answer';
 import Output from './components/Output';
 import Letters from './components/Letters';
 import Next from './components/Next';
+import Streak from './components/streak';
 import words from './components/words';
 
 class App extends Component {
@@ -18,9 +19,10 @@ class App extends Component {
     this.state = {
       picked: [" "],
       incorrectPicks: 0,
-      answerList: answerList,
-      answer: answer,
+      answerList,
+      answer,
       gameStatus: 0, // 0 - play, 1 - won,  2 - lost
+      streak: 0,
     };
 
     this.addAlphas = this.addAlphas.bind(this);
@@ -33,7 +35,10 @@ class App extends Component {
     this.setState({picked: alphaList}, () => {
       let word = this.state.answer.word.replace(new RegExp('[^' + this.state.picked + ']','g'), '-');
       if(word.indexOf('-') === -1) {
-        this.setState({gameStatus: 1})
+        this.setState({
+          gameStatus: 1,
+          streak: this.state.streak + 1
+        })
       }
     });
 
@@ -44,7 +49,10 @@ class App extends Component {
     if(this.state.answer.word.indexOf(alpha) === -1) {
       this.setState({incorrectPicks: (this.state.incorrectPicks + 1)}, () => {
         if(this.state.incorrectPicks === 6) {
-          this.setState({gameStatus: 2})
+          this.setState({
+            gameStatus: 2,
+            streak: 0,
+          })
         }
       });
     }
@@ -56,7 +64,7 @@ class App extends Component {
     this.setState({
       picked: [" "],
       incorrectPicks: 0,
-      answer: answer,
+      answer,
       gameStatus: 0,
     });
   }
@@ -81,6 +89,9 @@ class App extends Component {
           pickedArray = {this.state.picked}
           gameStatus = {this.state.gameStatus}
           addAlphas = {this.addAlphas}
+        />
+        <Streak
+          streak = {this.state.streak}
         />
         <Next
           gameStatus = {this.state.gameStatus}

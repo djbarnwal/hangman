@@ -10,11 +10,11 @@ export default [
   {word: "Dassi", hint:"Academic gods"},
   {word: "Peace", hint:"The most famous one"},
   {word: "Illumination", hint:"Lights."},
-  {word: "Happa", hint:"Hall ka karta dharta"},
+  {word: "Happa", hint:"Hall president"},
   {word: "Tempo Shout", hint:"We don't scream we have  ____"},
   {word: "Chaggi", hint:"Probably the most common CG"},
   {word: "Panji", hint:"He is a dude"},
   {word: "Faccha", hint:"The noobs of KGP"},
   {word: "Frustapa", hint:"Anxiety and annoyance for a KGPian"},
-  {word: "Bhajan", hint:"Hota sabke pass hai but btate koi nai"},
+  {word: "Bhajan", hint:"60% of DC searches"},
 ];
