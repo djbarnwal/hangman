@@ -4,7 +4,7 @@ let output;
 let ouch = "Ouch! ";
 const Hangman = (props) => {
   if(!props.incorrectPicks)
-    output = "No error yet!";
+    output = "You have 6 tries!";
   if(props.incorrectPicks > 0)
     output = ouch.repeat(props.incorrectPicks);
   if(props.incorrectPicks > 5)
