@@ -87,7 +87,7 @@ body {
   color: #222;
 }
 
-.hint {
+.hint, .streak {
   margin-top: 15px;
 }
 
