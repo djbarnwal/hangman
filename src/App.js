@@ -73,31 +73,35 @@ class App extends Component {
     return (
       <div className='container'>
         <div className='title'>Hangman Game</div>
-        <Output
-          gameStatus = {this.state.gameStatus}
-          answer = {this.state.answer.word}
-        />
-        <Hangman
-          incorrectPicks = {this.state.incorrectPicks}
-        />
-        <Answer
-          answer = {this.state.answer}
-          pickedArray = {this.state.picked}
-        />
-        <div className='info'>(All words are from KGP lingo)</div>
-        <Letters
-          pickedArray = {this.state.picked}
-          gameStatus = {this.state.gameStatus}
-          addAlphas = {this.addAlphas}
-        />
-        <Streak
-          streak = {this.state.streak}
-        />
-        <Next
-          gameStatus = {this.state.gameStatus}
-          answerList = {this.state.answerList}
-          nextWord = {this.nextWord}
-        />
+        <div className='figureWrapper'>
+          <Hangman
+            incorrectPicks = {this.state.incorrectPicks}
+          />
+        </div>
+        <div className='answerWrapper'>
+          <Output
+            gameStatus = {this.state.gameStatus}
+            answer = {this.state.answer.word}
+          />
+          <Answer
+            answer = {this.state.answer}
+            pickedArray = {this.state.picked}
+          />
+          <div className='info'>(All words are from KGP lingo)</div>
+          <Letters
+            pickedArray = {this.state.picked}
+            gameStatus = {this.state.gameStatus}
+            addAlphas = {this.addAlphas}
+          />
+          <Streak
+            streak = {this.state.streak}
+          />
+          <Next
+            gameStatus = {this.state.gameStatus}
+            answerList = {this.state.answerList}
+            nextWord = {this.nextWord}
+          />
+        </div>
       </div>
       );
     }
