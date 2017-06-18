@@ -8,12 +8,20 @@ body {
 
 .container {
   text-align: center;
-  margin-top: 50px;
+}
+
+.figureWrapper {
+  display: inline-block;
+}
+
+.answerWrapper {
+  display: inline-block;
+  width: 60%;
 }
 
 .title {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin: 2em 0;
 }
 
 .info {
@@ -22,7 +30,16 @@ body {
 }
 
 .hangman {
+  height: 350px;
   margin-top: 20px;
+  position: relative;
+  width: 350px;
+}
+
+.hangman img {
+  position: absolute;
+  left: 0;
+  height: 350px;
 }
 
 .output {
@@ -40,7 +57,7 @@ body {
 
 .letters ul {
   margin: 0 auto;
-  width: 50%;
+  width: 75%;
   margin-top: 25px;
   padding: 0;
 }
@@ -91,11 +108,24 @@ body {
   margin-top: 15px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 890px) {
+  .title {
+    margin: 0.3em 0;
+  }
+  .answerWrapper {
+    width: 100%;
+    margin-top: 2em;
+  }
   .answer-box {
     font-size: 22px;
     letter-spacing: 10px;
     margin-top: 30px;
+  }
+  .hangman img, .hangman {
+    height: 250px;
+  }
+  .hangman {
+    width: 225px;
   }
   .letters ul {
     width: 90%;
