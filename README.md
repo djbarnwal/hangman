@@ -1,5 +1,5 @@
 # Play Hangman
-https://dhiraj161298.github.io/hangman/
+https://djbarnwal.github.io/hangman/
 The traditional hangman puzzle game developed using ReactJS.
 
 ## Things to Do
