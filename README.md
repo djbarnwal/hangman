@@ -4,7 +4,7 @@ The traditional hangman puzzle game developed using ReactJS.
 
 ## Requirements for Development
 
-- `node`
+- `React`
 - `npm`
 
 ## Setup for Development
