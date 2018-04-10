@@ -69,6 +69,13 @@ class App extends Component {
     });
   }
 
+  text_input(event) {
+  let letter=event.key;
+  letter=letter.toUpperCase();
+  if ( !(this.state.picked.indexOf(letter) > -1 || this.state.gameStatus > 0) && letter>='A' && letter<='Z')
+	{this.addAlphas(letter);}
+  }
+
   render() {
     return (
       <div className='container'>
@@ -93,6 +100,8 @@ class App extends Component {
             gameStatus = {this.state.gameStatus}
             addAlphas = {this.addAlphas}
           />
+          INPUT BOX
+	  <input type="text" id="one" onKeyPress={(event) => {this.text_input(event)} }/>
           <Streak
             streak = {this.state.streak}
           />
