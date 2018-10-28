@@ -69,6 +69,17 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    const self = this;
+    document.addEventListener("keypress", function(evt) {
+      const charCode = evt.which || evt.keyCode;
+      const charStr = String.fromCharCode(charCode).toUpperCase();
+      if (/[A-Z]/.test(charStr)) {
+        self.addAlphas(charStr);
+      }
+    }, false);
+  }
+
   render() {
     return (
       <div className='container'>
