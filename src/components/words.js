@@ -38,4 +38,7 @@ export default [
   {word: "Panji", hint:"A C.G.P.A. in between 5 and 6"},
   {word: "Bhaat", hint:"Bekar Chat"},
   {word: "Ghaasi", hint:"A student of Agriculture Engineering Department"},
+  {word: "Baddy", hint:"The sport of Badminton"},
+  {word: "Tempo", hint:"Enthusiasm and vigour"},
+  {word: "Intro", hint:"Introduction"},
 ];
